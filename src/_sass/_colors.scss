@@ -84,16 +84,16 @@ $semi_fill_color: gtkalpha(currentColor, $lower_opacity / 2);
 $row_fill_color:  gtkalpha(currentColor, 0.05);
 
 // Misc colors
-$primary_color:         #5657f5;
-$alt_primary_color:     #5C6BC0;
-$progress_color:        #5D7DFB;
+$primary_color:         #FF0087;
+$alt_primary_color:     #FF0087;
+$progress_color:        #FF0087;
 $sidebar_color:         #F5F6FA;
-$accent_color:          $deep_purple_A200;
+$accent_color:          #FF0087;
 $disabled_accent_color: rgba($accent_color, 0.5);
 
-$theme_color_top:    #716ffb;
-$theme_color_middle: #6C6AF2;
-$theme_color_bottom: #4648FB;
+$theme_color_top:    #FF0087;
+$theme_color_middle: #FF0087;
+$theme_color_bottom: #FF0087;
 $theme_image: linear-gradient(to bottom, $theme_color_middle, $theme_color_bottom);
 $header_theme_image: linear-gradient(to bottom, $theme_color_top, $theme_color_middle);
 
@@ -114,7 +114,7 @@ $error_bg_color:    $red_400;
 
 $suggested_image: linear-gradient(to bottom, $light_blue_300, $blue_400);
 $destructive_image: linear-gradient(to bottom, $red_400, $red_A200);
-$progress_image: linear-gradient(to left, $purple_300, $deep_purple_400);
+$progress_image: linear-gradient(to left, #FF0087, #FF0087);
 
 $border_color:             if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
 $solid_border_color:       if($variant =='light', darken($bg_color, 8%), lighten($bg_color, 8%));

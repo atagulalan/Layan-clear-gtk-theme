@@ -22,8 +22,8 @@ $bar_size: 4px;
 $menuitem_size: 28px;
 
 // font families
-$font-family: "M+ 1c", Roboto, Cantarell, Sans-Serif;
-$large-font-family: Roboto, "M+ 1c", Cantarell, Sans-Serif;
+$font-family: "Fira Code", monospace;
+$large-font-family: "Fira Code", monospace;
 
 // font sizes
 $root-font-size: if($compact == 'false', 14px, 13px);

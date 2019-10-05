@@ -8,40 +8,40 @@
 
 %pathbar_box_button {
   border-radius: 100px;
-  color: $inverse_secondary_fg_color;
+  color: $secondary_fg_color;
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                $inverse_secondary_fg_color 0%,
+                                $secondary_fg_color 0%,
                                 transparent 0%)
                                 0 0 0 / 0 0 0;
 
 
 
   &:hover {
-    color: $inverse_fg_color;
+    color: $fg_color;
   }
 
   &:checked, &:active {
-    color: $inverse_fg_color;
+    color: $fg_color;
     background-color: transparent;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $inverse_fg_color 100%,
+                                  $fg_color 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
   }
 
   &:checked:backdrop, &:active:backdrop {
-    color: $inverse_disabled_fg_color;
+    color: $disabled_fg_color;
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $inverse_disabled_fg_color 100%,
+                                  $disabled_fg_color 100%,
                                   transparent 0%)
                                   0 0 2 / 0 0 2px;
   }
 
   &:backdrop {
-    color: $inverse_disabled_secondary_fg_color;
+    color: $disabled_secondary_fg_color;
 
     &:hover {
-      color: $inverse_secondary_fg_color;
+      color: $secondary_fg_color;
     }
   }
 }
@@ -65,7 +65,7 @@
 .nautilus-window headerbar {
 
   .path-bar-box { // Fixed nautilus 3.30 pathbar
-    background-image: $theme_image;
+    background-image: transparent;
     background-size: auto auto;
     background-position: center center;
     background-repeat: no-repeat;
@@ -73,7 +73,7 @@
     padding-left: 22px;
     margin-left: 6px;
     margin-right: 6px;
-    box-shadow: if($variant == 'light', $header_shadow_light, $header_shadow_dark);
+    //box-shadow: if($variant == 'light', $header_shadow_light, $header_shadow_dark);
 
     button { @extend %pathbar_box_button; }
 
@@ -85,17 +85,17 @@
         border-radius: 100px;
 
         &:not(:only-child):last-child {
-          color: $inverse_fg_color;
+          color: $fg_color;
           border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                        $inverse_fg_color 100%,
+                                        $fg_color 100%,
                                         transparent 0%)
                                         0 0 2 / 0 0 2px;
 
 
           &:backdrop {
-            color: $inverse_disabled_fg_color;
+            color: $disabled_fg_color;
             border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                          $inverse_disabled_fg_color 100%,
+                                          $disabled_fg_color 100%,
                                           transparent 0%)
                                           0 0 2 / 0 0 2px;
           }
@@ -119,10 +119,11 @@
 .nautilus-window paned > separator {
   min-width: 20px;
   color: transparent;
-  background-image: url("assets/scalable/side-paned.svg");
-  background-size: 20px 750px;
-  background-position: left center;
-  background-repeat: no-repeat;
+  background: transparent;
+  //background-image: url("assets/scalable/side-paned.svg");
+  //background-size: 20px 750px;
+  //background-position: left center;
+  //background-repeat: no-repeat;
 }
 
 // Nautilus placessidebar
@@ -285,6 +286,7 @@
 // always allocates at least 1 pixel
 .nautilus-window {
   searchbar {
+    
     border-top: 1px solid $border_color;
     background-color: rgba($bg_color, 0.65);
   }
