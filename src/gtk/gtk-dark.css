@@ -5062,7 +5062,7 @@ tooltip.background, tooltip.background.csd {
   border-radius: 7px;
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.1);
   background-color: rgba(68, 69, 75, 0.9);
-  color: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 tooltip decoration {
