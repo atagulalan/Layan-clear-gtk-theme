@@ -65,11 +65,11 @@
        gradientUnits="userSpaceOnUse"
        gradientTransform="translate(-42.629,-92.94)">
       <stop
-         stop-color="#FF0087"
+         stop-color="#FF89A9"
          offset="0"
          id="stop2" />
       <stop
-         stop-color="#FF0087"
+         stop-color="#FF89A9"
          offset="1"
          id="stop4" />
     </linearGradient>

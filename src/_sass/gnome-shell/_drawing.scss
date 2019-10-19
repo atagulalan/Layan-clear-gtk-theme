@@ -147,7 +147,7 @@
     color: $tc;
     background-color: $c;
     border-color: transparent;
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_1;
     text-shadow: none;
     icon-shadow: none;
   }
@@ -156,7 +156,7 @@
     color: $tc;
     background-color: mix($tc, $c, percentage($lower_opacity));
     border-color: transparent;
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_4;
     text-shadow: none;
     icon-shadow: none;
   }

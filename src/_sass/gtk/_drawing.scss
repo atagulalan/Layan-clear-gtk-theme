@@ -44,7 +44,7 @@
 
   @if $t == focus {
     border-image: none;
-    box-shadow: $shadow_2;
+    box-shadow: $shadow_4;
   }
 
   @if $t == disabled {
@@ -104,7 +104,7 @@
   }
 
   @if $t == hover {
-    box-shadow: $shadow_2, inset 0 0 0 9999px transparent;
+    box-shadow: $shadow_1, inset 0 0 0 9999px transparent;
     color: $fg_color;
   }
 
@@ -113,7 +113,7 @@
                 background-size 0,
                 background-image 0;
     animation: ripple_effect $shorter_duration $deceleration_curve forwards;
-    box-shadow: $shadow_2, inset 0 0 0 9999px $semi_fill_color;
+    box-shadow: $shadow_4, inset 0 0 0 9999px $semi_fill_color;
     background-image: radial-gradient(circle farthest-corner at center,
                                       $semi_fill_color 10%,
                                       transparent 0%);
@@ -253,8 +253,8 @@
   background-color: transparent; // shouldn't be needed, but better to be sure
 
   background-image: linear-gradient(to $_gradient_dir, // this is the dashed line
-                                    $_undershoot_color_light 50%,
-                                    $_undershoot_color_dark 50%);
+                                    transparent 0%,
+                                    transparent 100%);
 
   padding-#{$p}: 1px;
   background-size: $_dash_bg_size;

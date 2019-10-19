@@ -893,6 +893,8 @@ combobox {
   }
 
   #gtk-combobox-popup-menu {
+    border:1px solid #E6E6E6;
+
     menuitem {
       min-height: $medium_size - 2px * 2;
       padding: 0 8px;
@@ -1088,8 +1090,8 @@ headerbar {
   }
 
   entry {
-    background-color: if($variant == 'light', $base_color, lighten($base_color, 5%));
-    &:focus { background-color: if($variant == 'light', lighten($base_color, 3%), lighten($base_color, 8%)); }
+    background-color: if($variant == 'dark', $base_color, lighten($base_color, 5%));
+    &:focus { background-color: if($variant == 'dark', lighten($base_color, 3%), lighten($base_color, 8%)); }
   }
 
   // Reset headerbar linked rules
@@ -1118,7 +1120,7 @@ headerbar {
       background-size: auto auto;
       background-position: center center;
       background-repeat: no-repeat;
-      box-shadow: if($variant == 'light', $header_shadow_light, $header_shadow_dark);
+      box-shadow: if($variant == 'dark', $header_shadow_light, $header_shadow_dark);
 
       &:disabled {
         color: $inverse_disabled_fg_color;
@@ -1350,10 +1352,10 @@ headerbar {
   box & { // Remove unneeded side shadows with dirty hacks
     &:not(:only-child):last-child {
       &:dir(ltr) {
-        // box-shadow: if($variant == 'light', if($titlebar == 'dark', $header_shadow_dark_ltr, $shadow_6), $header_shadow_light_ltr);
+        // box-shadow: if($variant == 'dark', if($titlebar == 'light', $header_shadow_dark_ltr, $shadow_6), $header_shadow_light_ltr);
       }
       &:dir(rtl) {
-        // box-shadow: if($variant == 'light', if($titlebar == 'dark', $header_shadow_dark_rtl, $shadow_6), $header_shadow_light_rtl);
+        // box-shadow: if($variant == 'dark', if($titlebar == 'light', $header_shadow_dark_rtl, $shadow_6), $header_shadow_light_rtl);
       }
     }
   }
@@ -1624,9 +1626,10 @@ menubar,
 menu,
 .menu,
 .context-menu {
+  opacity:1;
   margin: 4px 0; // See https://bugzilla.gnome.org/show_bug.cgi?id=591258
   padding: 4px;
-  box-shadow: inset 0 1px rgba($menu_border_color, 0.06);
+  box-shadow: 0 0 transparent;
   background-color: $menu_bg_color;
   border: 1px solid $menu_border_color; // adds borders in a non composited env
   border-radius: $menu_radius;
@@ -1650,9 +1653,9 @@ menu,
     &:hover {
       transition: none;
       background-color: rgba($menu_fg_color, 0.08);
-      color: if($titlebar == 'light', $alt_primary_color, white);
+      color: if($titlebar == 'dark', $alt_primary_color, white);
 
-      accelerator { color: if($titlebar == 'light', $alt_primary_color, white); }
+      accelerator { color: if($titlebar == 'dark', $alt_primary_color, white); }
     }
 
     &:disabled { color: $menu_disabled_fg; }
@@ -1701,8 +1704,8 @@ menu,
     }
 
     &:hover {
-      background-image: if($titlebar == 'dark', image($inverse_divider_color), image($divider_color));
-      color: if($titlebar == 'dark', $inverse_fg_color, $fg_color);
+      background-image: if($titlebar == 'light', image($inverse_divider_color), image($divider_color));
+      color: if($titlebar == 'light', $inverse_fg_color, $fg_color);
     }
 
     &:disabled {
@@ -1744,7 +1747,7 @@ menuitem {
  * Popovers *
  ************/
 
-$popover_bg: if($variant == 'light', $grey_850, $lighter_bg_color);
+$popover_bg: if($variant == 'dark', $grey_850, $lighter_bg_color);
 $popover_fg: rgba($white, 0.7);
 $popover_disabled_fg: rgba($white, 0.3);
 $popover_border: rgba($white, 0.12);
@@ -1752,7 +1755,7 @@ $popover_border: rgba($white, 0.12);
 %popover_button {
   color: $popover_fg;
   background-color: transparent;
-  box-shadow: none;
+  box-shadow: 0 0 transparent;
 
   &:hover {
     transition: none;
@@ -1801,6 +1804,7 @@ $popover_border: rgba($white, 0.12);
 
 %popover_entry {
   border-radius: 0;
+  box-shadow: 0 0 transparent;
   caret-color: $inverse_fg_color;
   @include entry(flat-normal, $inverse_track_color);
 
@@ -3874,11 +3878,11 @@ headerbar,
 
         &, &:backdrop {
           &:hover {
-            color: $titlebar_secondary_fg_color;
+            color: transparent;
           }
 
           &:active, &:checked {
-            color: $titlebar_fg_color;
+            color: transparent;
           }
         }
 
@@ -3895,17 +3899,17 @@ headerbar,
         &:hover {
           padding: 2px;
           margin: -2px 0;
-          background-color: $red_400;
-          color: $inverse_secondary_fg_color;
-          box-shadow: $shadow_2;
+          background-color: $primary_color;
+          color: transparent;
+          box-shadow: $shadow_0;
        }
 
         &:active, &:checked {
           padding: 2px;
           margin: -2px 0;
           background-color: $accent_color;
-          color: $inverse_fg_color;
-          box-shadow: $shadow_1;
+          color: transparent;
+          box-shadow: $shadow_0;
         }
       }
     }

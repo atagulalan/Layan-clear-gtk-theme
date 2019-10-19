@@ -167,5 +167,11 @@ install_theme() {
 
 install_theme
 
+gsettings set org.gnome.desktop.interface gtk-theme 'Pop'
+gsettings set org.gnome.shell.extensions.user-theme name 'Pop'
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Layan-light-solid'
+gsettings set org.gnome.shell.extensions.user-theme name 'Layan-light-solid'
+
 echo
 echo Done.

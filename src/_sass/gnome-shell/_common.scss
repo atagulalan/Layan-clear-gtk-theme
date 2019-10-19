@@ -607,6 +607,8 @@ StScrollBar {
 .popup-menu {
   min-width: 200px;
   color: $fg_color;
+  background-color:$white;
+  box-shadow:$shadow_2;
 
   // .popup-menu-arrow { } //defined globally in the TOP BAR
 
@@ -909,7 +911,7 @@ StScrollBar {
   &.unlock-screen,
   &.login-screen,
   &.lock-screen {
-    background-color: if($titlebar == 'light', rgba($panel_bg_color, 0.5), transparent);
+    background-color: if($titlebar == 'dark', rgba($panel_bg_color, 0.5), transparent);
   }
 
   #panelLeft, #panelCenter { // spacing between activities<>app menu and such

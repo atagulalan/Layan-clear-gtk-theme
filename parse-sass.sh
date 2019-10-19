@@ -6,12 +6,12 @@ if [ ! "$(which sassc 2> /dev/null)" ]; then
   exit 1
 fi
 
-_COLOR_VARIANTS=('' '-dark' '-light')
+_COLOR_VARIANTS=('-light' '-dark')
 if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
 fi
 
-_SOLID_VARIANTS=('' '-solid')
+_SOLID_VARIANTS=('-solid')
 if [ ! -z "${SOLID_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _SOLID_VARIANTS <<< "${SOLID_VARIANTS:-}"
 fi
