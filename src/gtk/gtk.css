@@ -7379,6 +7379,10 @@ window.background.chromium tooltip.background, window.background.chromium toolti
   color: #565656;
 }
 
+window.background.chromium tooltip.background, window.background.chromium tooltip.background.csd {
+  color: #565656;
+}
+
 window.background.chromium > textview.view {
   background-color: #f4f4f9;
   color: rgba(0, 0, 0, 0.75);
