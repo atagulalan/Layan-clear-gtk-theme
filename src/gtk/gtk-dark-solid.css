@@ -4737,8 +4737,6 @@ messagedialog .titlebar:backdrop {
 messagedialog list, messagedialog row, messagedialog .view, messagedialog iconview, messagedialog textview.view > text {
   color: rgba(255, 255, 255, 0.7);
   background-color: black;
-  border-color: rgba(255, 255, 255, 0.12);
-}
 
 messagedialog .dialog-action-area button {
   padding: 4px 12px;
@@ -7379,6 +7377,10 @@ window.background.chromium entry.chromium {
 
 window.background.chromium entry.chromium:focus {
   border-color: #FF89A9;
+}
+
+window.background.chromium tooltip.background, window.background.chromium tooltip.background.csd {
+  color: #565656;
 }
 
 window.background.chromium tooltip.background, window.background.chromium tooltip.background.csd {
