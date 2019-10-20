@@ -49,13 +49,13 @@ $panel_track_color:                   if($titlebar == 'light', rgba($white, 0.3)
 $panel_divider_color:                 if($titlebar == 'light', rgba($white, 0.12), rgba($white, 0.12));
 
 // Background colors
-$bg_color:         if($variant == 'light', $blue_grey_50, fade($blue_grey_800));
+$bg_color:         if($variant == 'light', $white, fade($blue_grey_800));
 $base_color:       if($variant == 'light', $white, fade($blue_grey_850));
 $alt_base_color:   if($variant == 'light', darken($bg_color, 3%), lighten($bg_color, 3%));
-$lighter_bg_color: if($variant == 'light', $blue_grey_50, $blue_grey_750);
+$lighter_bg_color: if($variant == 'light', $white, $blue_grey_750);
 $alt_lighter_bg_color: if($variant == 'light', $blue_grey_100, fade($blue_grey_800)); // for gnome-shell sub menu
 $darker_bg_color:  if($variant == 'light', $blue_grey_200, fade($blue_grey_900));
-$keyboard_bg_color:  if($variant == 'light', $blue_grey_50, fade($blue_grey_800)); // for gnome-shell keyboard
+$keyboard_bg_color:  if($variant == 'light', $white, fade($blue_grey_800)); // for gnome-shell keyboard
 $alt_keyboard_bg_color:  if($variant == 'light', $blue_grey_300, fade($blue_grey_900)); // for gnome-shell keyboard
 
 $button_bg_color: if($variant == 'light', $base_color, $lighter_bg_color);
@@ -116,7 +116,7 @@ $suggested_image: linear-gradient(to bottom, $light_blue_300, $blue_400);
 $destructive_image: linear-gradient(to bottom, $red_400, $red_A200);
 $progress_image: linear-gradient(to left, #FF0087, #FF0087);
 
-$border_color:             if($variant == 'light', rgba($black, 0.08), rgba($white, 0.08));
+$border_color:             if($variant == 'light', rgba($black, 0.00), rgba($white, 0.08));
 $solid_border_color:       if($variant =='light', darken($bg_color, 8%), lighten($bg_color, 8%));
 $alt_border_color:         rgba($black, 0.2); // for non-native GTK+ apps (e.g. Firefox and Chrome)
 $highlight_color:          if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
